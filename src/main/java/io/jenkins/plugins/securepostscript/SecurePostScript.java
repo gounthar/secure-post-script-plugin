@@ -2,7 +2,9 @@ package io.jenkins.plugins.securepostscript;
 
 import hudson.EnvVars;
 import hudson.Extension;
-import hudson.model.*;
+import hudson.model.Result;
+import hudson.model.Run;
+import hudson.model.TaskListener;
 import hudson.model.listeners.RunListener;
 import org.jenkinsci.plugins.scriptsecurity.sandbox.groovy.SecureGroovyScript;
 import org.jenkinsci.plugins.scriptsecurity.scripts.ApprovalContext;
