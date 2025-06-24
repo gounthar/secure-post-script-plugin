@@ -9,7 +9,7 @@ import net.sf.json.JSONObject;
 import org.jenkinsci.plugins.scriptsecurity.sandbox.groovy.SecureGroovyScript;
 import org.kohsuke.stapler.DataBoundSetter;
 import org.kohsuke.stapler.QueryParameter;
-import org.kohsuke.stapler.StaplerRequest;
+import org.kohsuke.stapler.StaplerRequest2;
 
 import javax.annotation.CheckForNull;
 
@@ -54,7 +54,7 @@ public class SecurePostScriptConfiguration extends GlobalConfiguration {
   }
 
   @Override
-  public boolean configure(StaplerRequest req, JSONObject json) throws FormException {
+  public boolean configure(StaplerRequest2 req, JSONObject json) throws FormException {
     this.runCondition = Result.fromString(json.getString("runCondition"));
     save();
     return super.configure(req, json);
